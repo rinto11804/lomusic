@@ -4,11 +4,13 @@
      */
     export let title;
     export let img_src;
+    export let artist;
 </script>
 
 <div class="song-card">
     <img src={img_src} alt={title} />
     <p>{title}</p>
+    <p>{artist}</p>
 </div>
 
 <style>

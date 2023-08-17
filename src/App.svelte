@@ -1,14 +1,21 @@
 <script>
-	import Discover from "./components/Discover.svelte";
-	import NewRelease from "./components/NewRelease.svelte";
+	// import Discover from "./components/Discover.svelte";
+	// import NewRelease from "./components/NewRelease.svelte";
 	import { getAccessToken } from "./lib/songStore";
+
+    import Search from "./components/Search.svelte";
+
 </script>
 
 <main>
 	{#await getAccessToken() then _}
-		<NewRelease />
-		<Discover />
+	<!-- <NewRelease /> -->
+	<!-- <Discover /> -->
+
+	<Search/>
 	{/await}
+
+
 </main>
 
 <style>
