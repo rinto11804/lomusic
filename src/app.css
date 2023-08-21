@@ -1,5 +1,4 @@
 :root {
-    --fg-100: hsl(0, 0%, 15%);
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     color-scheme: light dark;
 }
@@ -14,12 +13,14 @@
 
 
 body {
-    background: var(--fg-100);
-    color: hsl(0, 0%, 90%);
+    height: 100vh;
+    background-color: #000;
 }
 
 #app {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    height: 100%;
 }

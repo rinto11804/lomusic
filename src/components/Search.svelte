@@ -19,12 +19,11 @@
 					Authorization: `Bearer ${$access_token ?? null} `,
 				},
 			}
-		).then((res) => res.json()).catch(err => error =err);
+		).then((res) => res.json());
 		return tracks.items;
 	}
 </script>
 
-<h2>Search for a track</h2>
 <div class="search">
 	<input
 		type="text"
@@ -54,23 +53,34 @@
 
 <style>
 	.search {
-		display: inline-block;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		justify-content: baseline;
 		margin: 2rem;
 	}
 
 	input {
-		height: 2rem;
 		border: none;
-		width: 15rem;
-		padding: 0.55rem;
-		border-radius: 0.45rem;
+		background-color: #242424;
+		border-radius: 0.4rem;
+		color: #fff !important;
+		height: 48px;
+		padding: 3px 36px;
+		text-overflow: ellipsis;
+		font-size: 1.1rem;
+	}
+
+	input:focus {
+		outline: 2px solid whitesmoke;
 	}
 
 	button {
-		height: 2rem;
+		height: 45px;
 		outline: none;
 		border: none;
-		padding: 0.45rem;
+		padding-inline:1rem;
+		transform: rotateY(180deg);
 	}
 	.song_wrapper {
 		display: flex;
@@ -78,5 +88,6 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
+		gap: 1rem;
 	}
 </style>

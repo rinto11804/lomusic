@@ -47,6 +47,7 @@
                         <SongCard
                             title={item.album.name}
                             img_src={item.album.images[1].url}
+                            artist={item.album.artists[0].name}
                         />
                     {/if}
                 {/each}
@@ -74,7 +75,7 @@
     }
 
     h2 {
-        margin: 2rem 0.2rem;
+        font-size: 6rem;
     }
     select {
         background-color: hsl(0, 0%, 10%);

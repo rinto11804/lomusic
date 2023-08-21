@@ -19,8 +19,19 @@
     <h2>New Releases</h2>
     <div class="song-card-wrapper">
         {#each data.albums.items as item (item.id)}
-            <SongCard title={item.name} img_src={item.images[1].url} />
+            <SongCard
+                title={item.name}
+                img_src={item.images[1].url}
+                artist={item.artists[0].name}
+            />
         {/each}
     </div>
     <p>Show more</p>
 {/await}
+
+<style>
+    h2 {
+        margin: 0.04rem 0 0.5rem;
+        font-size: 6rem;
+    }
+</style>
