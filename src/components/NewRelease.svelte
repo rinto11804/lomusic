@@ -31,7 +31,6 @@
 
 <style>
     h2 {
-        margin: 0.04rem 0 0.5rem;
-        font-size: 6rem;
+        font-size: 4rem;
     }
 </style>

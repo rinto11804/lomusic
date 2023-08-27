@@ -24,7 +24,6 @@
 </script>
 
 <header class="discover">
-    <div class="discover-body">
         <h2>Discover</h2>
         <select
             name="genres"
@@ -36,7 +35,6 @@
                 <option value={genre.title}>{genre.title}</option>
             {/each}
         </select>
-    </div>
     {#if recommendation}
         {#await recommendation}
             <p>Loading.....</p>
@@ -58,11 +56,8 @@
 </header>
 
 <style>
-    .discover {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .discover{
+        width:100%;
     }
     :global(.song-card-wrapper) {
         display: flex;
@@ -71,11 +66,11 @@
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-        margin: 1rem;
     }
 
     h2 {
-        font-size: 6rem;
+        font-size: 4rem;
+        margin-block:1rem;
     }
     select {
         background-color: hsl(0, 0%, 10%);
@@ -85,5 +80,6 @@
         height: 2rem;
         border-radius: 0.35rem;
         text-align: center;
+        margin-block:1rem;
     }
 </style>
